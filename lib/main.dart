@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:weather_app/screens/home_page.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:news_app/Data/Cubits/AllNewsCubit/all_news_cubit.dart';
+import 'package:news_app/screens/home_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,9 +12,16 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: HomePage(),
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(
+          create: (context) => AllNewsCubit(),
+        ),
+      ],
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: HomePage(),
+      ),
     );
   }
 }
