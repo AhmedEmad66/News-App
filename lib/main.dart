@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
           create: (context) => AllNewsCubit(),
         ),
       ],
-      child: MaterialApp(
+      child: const MaterialApp(
         debugShowCheckedModeBanner: false,
         home: HomePage(),
       ),

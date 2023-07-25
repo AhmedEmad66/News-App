@@ -7,7 +7,7 @@ class AllNewsRepo {
   Future<AllNews?> getAllNews() async {
     try {
       var response = await http.get(Uri.parse(
-          "https://newsapi.org/v2/everything?q=tesla&from=2023-06-24&sortBy=publishedAt&apiKey=2aee8788c05642d399dc14e88fc06fd2"));
+          "https://newsapi.org/v2/everything?q=tesla&from=2023-06-25&sortBy=publishedAt&apiKey=2aee8788c05642d399dc14e88fc06fd2"));
       Map<String, dynamic> decodeResponse = json.decode(response.body);
 
       if (response.statusCode == 200) {

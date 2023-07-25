@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:news_app/Data/Cubits/AllNewsCubit/all_news_cubit.dart';
-import 'package:news_app/Data/Models/all_news/all_news.dart';
 
 import '../res/my_colors.dart';
 import '../res/my_strings.dart';
